@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="angryCupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ef4444"/>
+        <stop offset="100%" stop-color="#dc2626"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Angry Fire Steam -->
+        <path d="M70 30 Q65 14 74 10 Q80 18 78 30" fill="#f97316"/>
+        <path d="M85 32 Q92 15 88 12 Q82 20 84 32" fill="#eab308"/>
+        <!-- Handle -->
+        <path d="M105 58 C126 58 126 92 105 92" fill="none" stroke="#991b1b" stroke-width="8" stroke-linecap="round"/>
+        <!-- Mug Body -->
+        <rect x="42" y="42" width="68" height="72" rx="14" fill="url(#angryCupGrad)" stroke="#991b1b" stroke-width="3"/>
+        <ellipse cx="76" cy="44" rx="34" ry="10" fill="#450a0a"/>
+        <!-- Slanted Angry Eyes -->
+        <line x1="52" y1="68" x2="68" y2="76" stroke="#450a0a" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="100" y1="68" x2="84" y2="76" stroke="#450a0a" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- Gritted Teeth -->
+        <rect x="64" y="86" width="24" height="11" rx="3" fill="#ffffff" stroke="#450a0a" stroke-width="2"/>
+        <line x1="72" y1="86" x2="72" y2="97" stroke="#450a0a" stroke-width="1.5"/>
+        <line x1="80" y1="86" x2="80" y2="97" stroke="#450a0a" stroke-width="1.5"/>
+        <!-- Anger Vein Symbol 💢 -->
+        <g transform="translate(108, 30) scale(0.6)">
+          <path d="M10 0 L10 20 M0 10 L20 10 M5 2 L18 15 M18 2 L5 15" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </g>
+    
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="80" r="46" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+        <!-- Goofy Cross Eyes -->
+        <circle cx="62" cy="72" r="10" fill="#ffffff" stroke="#78350f" stroke-width="2"/>
+        <circle cx="68" cy="72" r="4" fill="#000000"/>
+        <circle cx="98" cy="72" r="10" fill="#ffffff" stroke="#78350f" stroke-width="2"/>
+        <circle cx="92" cy="72" r="4" fill="#000000"/>
+        <!-- Big Wavy Tongue Out -->
+        <path d="M65 92 Q80 92 95 92" stroke="#78350f" stroke-width="3"/>
+        <path d="M72 92 Q70 120 80 122 Q90 120 88 92" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+        <line x1="80" y1="94" x2="80" y2="114" stroke="#991b1b" stroke-width="1.5"/>
+      </g>
+    
+</svg>

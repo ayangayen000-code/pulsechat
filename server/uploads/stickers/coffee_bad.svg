@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="c_bad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#71717a"/><stop offset="100%" stop-color="#3f3f46"/></linearGradient>
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <path d="M72 32 Q66 18 78 12 Q86 20 80 32" fill="#52525b"/>
+        <path d="M105 58 C126 58 126 92 105 92" fill="none" stroke="#27272a" stroke-width="8" stroke-linecap="round"/>
+        <rect x="42" y="42" width="68" height="72" rx="14" fill="url(#c_bad)" stroke="#27272a" stroke-width="3"/>
+        <ellipse cx="76" cy="44" rx="34" ry="10" fill="#18181b" stroke="#27272a" stroke-width="2"/>
+        <line x1="56" y1="70" x2="68" y2="76" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        <line x1="96" y1="70" x2="84" y2="76" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 92 Q76 84 82 92" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M74 94 Q76 102 78 94 Z" fill="#ef4444"/>
+        <text x="56" y="110" font-family="sans-serif" font-weight="900" font-size="10" fill="#f87171">BAD 👎</text>
+      </g>
+    
+</svg>

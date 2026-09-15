@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <rect x="36" y="52" width="88" height="56" rx="8" fill="#18181b" stroke="#ec4899" stroke-width="3"/>
+        <rect x="44" y="60" width="72" height="32" rx="4" fill="#06b6d4"/>
+        <circle cx="62" cy="76" r="8" fill="#18181b" stroke="#ffffff" stroke-width="2"/>
+        <circle cx="98" cy="76" r="8" fill="#18181b" stroke="#ffffff" stroke-width="2"/>
+        <rect x="70" y="72" width="20" height="8" rx="2" fill="#ffffff" opacity="0.6"/>
+        <text x="56" y="102" font-family="monospace" font-weight="900" font-size="7" fill="#ec4899">LO-FI VIBES</text>
+      </g>
+    
+</svg>

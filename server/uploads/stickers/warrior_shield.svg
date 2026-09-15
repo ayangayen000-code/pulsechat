@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Warrior behind shield -->
+        <circle cx="80" cy="65" r="30" fill="#94a3b8" stroke="#475569" stroke-width="2.5"/>
+        <circle cx="72" cy="62" r="3" fill="#facc15"/>
+        <circle cx="88" cy="62" r="3" fill="#facc15"/>
+        <!-- Big Golden Lion Shield -->
+        <path d="M50 70 L110 70 L110 105 Q80 138 50 105 Z" fill="#f59e0b" stroke="#78350f" stroke-width="3.5"/>
+        <path d="M56 75 L104 75 L104 102 Q80 130 56 102 Z" fill="#fbbf24"/>
+        <!-- Shield Cross / Emblem -->
+        <polygon points="80,82 85,92 95,92 87,98 90,108 80,102 70,108 73,98 65,92 75,92" fill="#b91c1c"/>
+      </g>
+    
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="85" r="36" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+        <circle cx="68" cy="82" r="3.5" fill="#431407"/>
+        <circle cx="92" cy="82" r="3.5" fill="#431407"/>
+        <path d="M74 94 Q80 100 86 94" stroke="#431407" stroke-width="2.5" fill="none"/>
+        <!-- Horns / Helmet -->
+        <path d="M48 65 Q70 48 112 65" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" fill="none"/>
+        <!-- LEVEL UP Text Banner -->
+        <rect x="22" y="24" width="116" height="28" rx="8" fill="#10b981" stroke="#047857" stroke-width="2"/>
+        <text x="32" y="44" font-family="sans-serif" font-weight="900" font-size="16" fill="#ffffff">LEVEL UP! 🌟</text>
+        <!-- Golden Star Rays -->
+        <polygon points="80,5 83,18 96,20 86,28 89,41 80,34 71,41 74,28 64,20 77,18" fill="#facc15" transform="translate(45, 10) scale(0.6)"/>
+      </g>
+    
+</svg>

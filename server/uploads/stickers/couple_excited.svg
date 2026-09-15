@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <path d="M80 18 C75 8 60 10 60 20 C60 30 80 38 80 38 C80 38 100 30 100 20 C100 10 85 8 80 18 Z" fill="#ec4899"/>
+        <circle cx="80" cy="82" r="45" fill="#ffe4e6" stroke="#f43f5e" stroke-width="3"/>
+        <circle cx="80" cy="82" r="38" fill="#ffffff" opacity="0.6"/>
+        
+        <polygon points="72,66 74,72 80,73 75,76 73,82 70,77 65,78 69,73 67,68 72,71" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <polygon points="88,66 90,72 96,73 91,76 89,82 86,77 81,78 85,73 83,68 88,71" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <ellipse cx="80" cy="87" rx="8" ry="6" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>
+        <circle cx="62" cy="80" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="98" cy="80" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="104" cy="58" r="3" fill="#f59e0b"/>
+        <circle cx="56" cy="58" r="2" fill="#3b82f6"/>
+      
+      </g>
+    
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Spinning Shuriken -->
+        <g transform="rotate(45 80 80)">
+          <!-- 4 blade star -->
+          <polygon points="80,24 88,68 136,80 88,92 80,136 72,92 24,80 72,68" fill="#64748b" stroke="#334155" stroke-width="3"/>
+          <polygon points="80,34 85,72 126,80 85,88 80,126 75,88 34,80 75,72" fill="#94a3b8"/>
+          <!-- Center hole -->
+          <circle cx="80" cy="80" r="8" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+        </g>
+        <!-- Motion swoosh lines -->
+        <path d="M30 40 Q80 15 130 40" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+        <path d="M130 120 Q80 145 30 120" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+      </g>
+    
+</svg>

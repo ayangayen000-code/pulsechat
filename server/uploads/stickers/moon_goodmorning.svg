@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fef08a"/>
+        <stop offset="100%" stop-color="#facc15"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Glowing Crescent Moon -->
+        <path d="M96 28 C60 28 32 60 32 96 C32 132 60 144 96 144 C72 130 64 88 88 56 C96 46 102 38 96 28 Z" fill="url(#moonGrad)" stroke="#ca8a04" stroke-width="3"/>
+        
+        <circle cx="66" cy="60" r="12" fill="#facc15" stroke="#eab308" stroke-width="2"/>
+        <line x1="66" y1="44" x2="66" y2="47" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="52" y1="52" x2="55" y2="54" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="80" y1="52" x2="77" y2="54" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M52 80 Q58 74 64 80" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="74" cy="80" r="3.5" fill="#1e293b"/>
+        <path d="M59 90 Q66 96 73 90" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <rect x="40" y="106" width="52" height="14" rx="5" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+        <text x="66" y="117" font-family="sans-serif" font-weight="900" font-size="9" fill="#a16207" text-anchor="middle">MORNING ☀️</text>
+      
+      </g>
+    
+</svg>

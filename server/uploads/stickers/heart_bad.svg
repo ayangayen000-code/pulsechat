@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <path d="M80 50 C65 25 30 35 30 65 C30 95 80 125 80 125 C80 125 130 95 130 65 C130 35 95 25 80 50 Z" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+        <line x1="58" y1="66" x2="70" y2="72" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+        <line x1="102" y1="66" x2="90" y2="72" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M72 86 Q80 80 88 86" stroke="#0f172a" stroke-width="2.5" fill="none"/>
+        <text x="54" y="142" font-family="sans-serif" font-weight="900" font-size="13" fill="#475569">BAD 👎</text>
+      </g>
+    
+</svg>

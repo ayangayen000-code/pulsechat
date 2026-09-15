@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="95" r="40" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+        <!-- Big Round Staring Eyes -->
+        <circle cx="65" cy="92" r="8" fill="#ffffff" stroke="#78350f" stroke-width="2"/>
+        <circle cx="65" cy="92" r="3" fill="#000000"/>
+        <circle cx="95" cy="92" r="8" fill="#ffffff" stroke="#78350f" stroke-width="2"/>
+        <circle cx="95" cy="92" r="3" fill="#000000"/>
+        <!-- Gaping O mouth -->
+        <circle cx="80" cy="112" r="7" fill="#78350f"/>
+        <!-- Mushroom cloud / galaxy brain explosion on top -->
+        <path d="M45 65 C25 45 40 18 70 25 C80 10 105 15 110 32 C125 25 140 45 115 65 Z" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+        <circle cx="80" cy="40" r="14" fill="#fef08a"/>
+        <!-- Spark particles -->
+        <circle cx="35" cy="25" r="3" fill="#ef4444"/>
+        <circle cx="128" cy="22" r="3" fill="#ef4444"/>
+      </g>
+    
+</svg>

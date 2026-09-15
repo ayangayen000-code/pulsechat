@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="80" r="46" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+        <path d="M52 68 L64 74 L52 80" stroke="#431407" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M108 68 L96 74 L108 80" stroke="#431407" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M64 84 Q80 110 96 84 Z" fill="#e11d48" stroke="#431407" stroke-width="3"/>
+        <ellipse cx="80" cy="98" rx="7" ry="4" fill="#fca5a5"/>
+        <path d="M42 66 Q36 60 40 54 Q46 60 42 66 Z" fill="#38bdf8"/>
+        <path d="M118 66 Q124 60 120 54 Q114 60 118 66 Z" fill="#38bdf8"/>
+      </g>
+    
+</svg>

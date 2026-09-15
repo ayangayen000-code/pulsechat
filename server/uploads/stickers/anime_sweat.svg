@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="80" r="46" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+        <!-- Awkward forced smile -->
+        <circle cx="60" cy="74" r="4" fill="#431407"/>
+        <circle cx="100" cy="74" r="4" fill="#431407"/>
+        <path d="M68 92 Q80 100 92 92" stroke="#431407" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Giant Anime Sweat Drop on Temple -->
+        <path d="M120 40 C110 55 112 68 122 72 C132 68 132 55 120 40 Z" fill="#38bdf8" stroke="#0284c7" stroke-width="2.5"/>
+        <circle cx="120" cy="62" r="3" fill="#ffffff" opacity="0.7"/>
+        <!-- Slanted worry brows -->
+        <path d="M54 66 L66 62" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M106 66 L94 62" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+    
+</svg>

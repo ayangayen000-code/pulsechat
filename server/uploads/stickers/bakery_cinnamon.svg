@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Cinnamon Roll Bun -->
+        <ellipse cx="80" cy="82" rx="46" ry="38" fill="#d97706" stroke="#78350f" stroke-width="3"/>
+        <!-- Swirl -->
+        <path d="M80 62 C105 62 115 82 105 98 C95 110 65 110 55 95 C45 80 55 60 78 52 C95 48 118 60 120 85" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+        <!-- White Glaze Icing -->
+        <path d="M60 65 Q80 50 100 65 Q90 85 70 80 Z" fill="#ffffff" opacity="0.85"/>
+        <!-- Hug arms -->
+        <path d="M42 85 C32 80 32 95 44 95" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+        <path d="M118 85 C128 80 128 95 116 95" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+        <!-- Face -->
+        <circle cx="70" cy="82" r="3" fill="#451a03"/>
+        <circle cx="90" cy="82" r="3" fill="#451a03"/>
+        <path d="M76 89 Q80 93 84 89" stroke="#451a03" stroke-width="2" fill="none"/>
+        <!-- Mini Heart -->
+        <path d="M80 30 C76 22 66 25 70 34 C76 40 80 44 80 44 C80 44 84 40 90 34 C94 25 84 22 80 30 Z" fill="#f43f5e"/>
+      </g>
+    
+</svg>

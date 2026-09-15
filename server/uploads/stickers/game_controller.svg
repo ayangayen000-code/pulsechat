@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Game Console Body -->
+        <rect x="42" y="32" width="76" height="106" rx="14" fill="#06b6d4" stroke="#0891b2" stroke-width="3"/>
+        <!-- Screen -->
+        <rect x="52" y="44" width="56" height="42" rx="6" fill="#155e75" stroke="#0e7490" stroke-width="2"/>
+        <rect x="56" y="48" width="48" height="34" rx="4" fill="#a3e635"/>
+        <text x="62" y="70" font-family="monospace" font-weight="900" font-size="13" fill="#1e3a5f">WIN!</text>
+        <!-- D-Pad -->
+        <rect x="55" y="96" width="18" height="6" rx="2" fill="#18181b"/>
+        <rect x="61" y="90" width="6" height="18" rx="2" fill="#18181b"/>
+        <!-- A/B Buttons -->
+        <circle cx="95" cy="98" r="4.5" fill="#ef4444"/>
+        <circle cx="106" cy="92" r="4.5" fill="#facc15"/>
+      </g>
+    
+</svg>

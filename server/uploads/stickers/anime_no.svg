@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="70" r="40" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+        <line x1="56" y1="62" x2="70" y2="70" stroke="#431407" stroke-width="4" stroke-linecap="round"/>
+        <line x1="104" y1="62" x2="90" y2="70" stroke="#431407" stroke-width="4" stroke-linecap="round"/>
+        <rect x="70" y="82" width="20" height="8" rx="2" fill="#ffffff" stroke="#431407" stroke-width="2"/>
+        <!-- Crossed Arms Big X -->
+        <line x1="45" y1="90" x2="115" y2="135" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/>
+        <line x1="115" y1="90" x2="45" y2="135" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/>
+        <text x="44" y="152" font-family="sans-serif" font-weight="900" font-size="14" fill="#dc2626">DAME! ❌</text>
+      </g>
+    
+</svg>

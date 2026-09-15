@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="80" r="44" fill="#fde047" stroke="#ca8a04" stroke-width="3"/>
+        <path d="M58 72 L68 78 L58 84" stroke="#713f12" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M102 72 L92 78 L102 84" stroke="#713f12" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M68 92 Q80 112 92 92 Z" fill="#dc2626" stroke="#713f12" stroke-width="2"/>
+        <!-- Champagne bottle -->
+        <rect x="110" y="20" width="16" height="40" rx="4" fill="#15803d" transform="rotate(35 110 20)"/>
+        <circle cx="125" cy="18" r="4" fill="#fbbf24"/>
+        <circle cx="135" cy="10" r="3" fill="#fbbf24"/>
+        <circle cx="110" cy="8" r="2.5" fill="#fbbf24"/>
+        <text x="36" y="146" font-family="sans-serif" font-weight="900" font-size="14" fill="#ca8a04">VICTORY! 🍾</text>
+      </g>
+    
+</svg>

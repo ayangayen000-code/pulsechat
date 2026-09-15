@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="rainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#94a3b8"/>
+        <stop offset="100%" stop-color="#475569"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Storm Cloud Body -->
+        <circle cx="56" cy="74" r="22" fill="url(#rainGrad)" stroke="#334155" stroke-width="2.5"/>
+        <circle cx="104" cy="74" r="22" fill="url(#rainGrad)" stroke="#334155" stroke-width="2.5"/>
+        <circle cx="80" cy="62" r="28" fill="url(#rainGrad)" stroke="#334155" stroke-width="2.5"/>
+        <rect x="52" y="70" width="56" height="28" rx="12" fill="url(#rainGrad)"/>
+        <!-- Droplets -->
+        <ellipse cx="60" cy="116" rx="4" ry="8" fill="#38bdf8"/>
+        <ellipse cx="80" cy="122" rx="4" ry="8" fill="#38bdf8"/>
+        <ellipse cx="100" cy="116" rx="4" ry="8" fill="#38bdf8"/>
+        
+        <circle cx="64" cy="74" r="3.5" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="96" cy="74" r="3.5" fill="#f43f5e" opacity="0.6"/>
+        <path d="M66 66 Q72 60 78 66" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 66 Q88 60 94 66" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M71 74 Q80 84 89 74" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="#f43f5e"/>
+        <polygon points="104,50 106,56 112,58 106,60 104,66 102,60 96,58 102,56" fill="#facc15"/>
+      
+      </g>
+    
+</svg>

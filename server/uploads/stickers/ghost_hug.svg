@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Ghost 1 -->
+        <path d="M40 85 C40 45 100 45 100 85 C100 120 90 125 80 118 C70 125 55 118 45 122 C40 115 40 105 40 85 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5"/>
+        <circle cx="65" cy="72" r="3.5" fill="#1e1b4b"/>
+        <circle cx="85" cy="72" r="3.5" fill="#1e1b4b"/>
+        <path d="M72 80 Q75 84 78 80" stroke="#1e1b4b" stroke-width="2" fill="none"/>
+        <!-- Ghost 2 hugging -->
+        <path d="M85 90 C85 58 135 58 135 90 C135 120 125 125 115 118 C105 125 95 118 88 122 Z" fill="#fbcfe8" stroke="#f472b6" stroke-width="2" opacity="0.85"/>
+        <circle cx="108" cy="78" r="3" fill="#831843"/>
+        <circle cx="122" cy="78" r="3" fill="#831843"/>
+        <!-- Hug arms -->
+        <path d="M68 85 Q95 85 105 82" stroke="#cbd5e1" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <!-- Heart float -->
+        <path d="M80 30 C76 22 66 25 70 34 C76 40 80 44 80 44 C80 44 84 40 90 34 C94 25 84 22 80 30 Z" fill="#ec4899"/>
+      </g>
+    
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="80" r="40" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+        <!-- Cheerful Face -->
+        <path d="M68 76 Q73 70 78 76" stroke="#431407" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 76 Q87 70 92 76" stroke="#431407" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M72 88 Q80 100 88 88 Z" fill="#ef4444"/>
+        <!-- Sword Raised High -->
+        <polygon points="120,15 128,60 122,60 114,15" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+        <rect x="110" y="60" width="16" height="6" rx="2" fill="#f59e0b"/>
+        <!-- Trophy / Laurel -->
+        <text x="32" y="32" font-family="sans-serif" font-weight="900" font-size="20" fill="#facc15">👑 WIN</text>
+      </g>
+    
+</svg>

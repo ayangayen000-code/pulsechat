@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <ellipse cx="58" cy="42" rx="12" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2.5"/>
+        <ellipse cx="58" cy="44" rx="6" ry="24" fill="#fbcfe8"/>
+        <ellipse cx="102" cy="42" rx="12" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2.5"/>
+        <ellipse cx="102" cy="44" rx="6" ry="24" fill="#fbcfe8"/>
+        <circle cx="80" cy="90" r="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+        <polygon points="76,92 84,92 80,96" fill="#f43f5e"/>
+        
+        <line x1="66" y1="70" x2="78" y2="76" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="94" y1="70" x2="82" y2="76" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="72" cy="80" r="3" fill="#1e293b"/>
+        <circle cx="88" cy="80" r="3" fill="#1e293b"/>
+        <path d="M72 89 L76 87 L80 89 L84 87 L88 89" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M100 60 L108 60 M104 56 L104 64 M101 57 L107 63" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      
+      </g>
+    
+</svg>

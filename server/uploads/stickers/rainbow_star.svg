@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Rainbow Tail -->
+        <path d="M40 120 Q65 95 90 100" stroke="#f43f5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M35 126 Q60 101 85 106" stroke="#fbbf24" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M30 132 Q55 107 80 112" stroke="#38bdf8" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <!-- Star Body -->
+        <polygon points="90,32 96,52 118,52 100,66 106,86 90,74 74,86 80,66 62,52 84,52" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+        <circle cx="84" cy="60" r="2.5" fill="#451a03"/>
+        <circle cx="96" cy="60" r="2.5" fill="#451a03"/>
+        <path d="M87 66 Q90 70 93 66" stroke="#451a03" stroke-width="2" fill="none"/>
+        <circle cx="78" cy="63" r="3" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="102" cy="63" r="3" fill="#f43f5e" opacity="0.6"/>
+      </g>
+    
+</svg>

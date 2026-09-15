@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="ghostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="100%" stop-color="#e0e7ff"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Ghost Sheet with Wavy Hem -->
+        <path d="M40 85 C40 45 120 45 120 85 L120 120 Q110 112 100 120 Q90 112 80 120 Q70 112 60 120 Q50 112 40 120 Z" fill="url(#ghostGrad)" stroke="#a5b4fc" stroke-width="3"/>
+        <!-- Little floating ghostly hands -->
+        <ellipse cx="36" cy="88" rx="8" ry="5" fill="#ffffff" stroke="#a5b4fc" stroke-width="2"/>
+        <ellipse cx="124" cy="88" rx="8" ry="5" fill="#ffffff" stroke="#a5b4fc" stroke-width="2"/>
+        
+        <path d="M66 70 Q72 64 78 70" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 70 Q88 64 94 70" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M74 80 Q80 85 86 80" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <rect x="54" y="96" width="52" height="15" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+        <text x="80" y="107" font-family="sans-serif" font-weight="900" font-size="9" fill="#b45309" text-anchor="middle">THANKS! 🙏</text>
+      
+      </g>
+    
+</svg>

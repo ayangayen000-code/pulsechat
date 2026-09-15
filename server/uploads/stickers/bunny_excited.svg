@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <ellipse cx="58" cy="42" rx="12" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2.5"/>
+        <ellipse cx="58" cy="44" rx="6" ry="24" fill="#fbcfe8"/>
+        <ellipse cx="102" cy="42" rx="12" ry="34" fill="#ffffff" stroke="#e2e8f0" stroke-width="2.5"/>
+        <ellipse cx="102" cy="44" rx="6" ry="24" fill="#fbcfe8"/>
+        <circle cx="80" cy="90" r="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+        <polygon points="76,92 84,92 80,96" fill="#f43f5e"/>
+        
+        <polygon points="72,68 74,74 80,75 75,78 73,84 70,79 65,80 69,75 67,70 72,73" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <polygon points="88,68 90,74 96,75 91,78 89,84 86,79 81,80 85,75 83,70 88,73" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <ellipse cx="80" cy="89" rx="8" ry="6" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>
+        <circle cx="62" cy="82" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="98" cy="82" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="104" cy="60" r="3" fill="#f59e0b"/>
+        <circle cx="56" cy="60" r="2" fill="#3b82f6"/>
+      
+      </g>
+    
+</svg>

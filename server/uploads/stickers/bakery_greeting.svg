@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="croissantGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fbbf24"/>
+        <stop offset="100%" stop-color="#d97706"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <path d="M26 102 C30 48 65 34 80 34 C95 34 130 48 134 102 C118 90 105 76 80 76 C55 76 42 90 26 102 Z" fill="url(#croissantGrad)" stroke="#b45309" stroke-width="3"/>
+        <path d="M52 48 Q80 40 108 48" stroke="#92400e" stroke-width="2" fill="none"/>
+        <path d="M60 62 Q80 56 100 62" stroke="#92400e" stroke-width="2" fill="none"/>
+        
+        <path d="M68 62 Q74 56 80 62" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="88" cy="62" r="3" fill="#1e293b"/>
+        <path d="M74 70 Q80 76 86 70" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <rect x="56" y="86" width="48" height="15" rx="5" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+        <text x="80" y="97" font-family="sans-serif" font-weight="900" font-size="9" fill="#4338ca" text-anchor="middle">HELLO! 👋</text>
+      
+      </g>
+    
+</svg>

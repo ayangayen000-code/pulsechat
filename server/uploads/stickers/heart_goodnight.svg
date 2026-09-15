@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <path d="M106 32 C92 32 80 44 80 58 C80 72 92 84 106 84 C98 78 94 68 98 56 Z" fill="#facc15"/>
+        <path d="M80 50 C65 25 30 35 30 65 C30 95 80 125 80 125 C80 125 130 95 130 65 C130 35 95 25 80 50 Z" fill="#818cf8" stroke="#4f46e5" stroke-width="3"/>
+        <path d="M62 70 Q68 74 74 70" stroke="#312e81" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M86 70 Q92 74 98 70" stroke="#312e81" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <text x="100" y="58" font-family="sans-serif" font-weight="900" font-size="12" fill="#facc15">zZ</text>
+        <rect x="52" y="96" width="56" height="14" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5"/>
+        <text x="80" y="107" font-family="sans-serif" font-weight="900" font-size="9" fill="#c7d2fe" text-anchor="middle">SWEET DREAMS 🌙</text>
+      </g>
+    
+</svg>

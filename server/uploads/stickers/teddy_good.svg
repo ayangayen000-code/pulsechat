@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="bearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fcd34d"/>
+        <stop offset="100%" stop-color="#d97706"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Ears -->
+        <circle cx="46" cy="50" r="16" fill="url(#bearGrad)" stroke="#b45309" stroke-width="3"/>
+        <circle cx="46" cy="50" r="8" fill="#fecdd3"/>
+        <circle cx="114" cy="50" r="16" fill="url(#bearGrad)" stroke="#b45309" stroke-width="3"/>
+        <circle cx="114" cy="50" r="8" fill="#fecdd3"/>
+        <!-- Head -->
+        <circle cx="80" cy="85" r="44" fill="url(#bearGrad)" stroke="#b45309" stroke-width="3.5"/>
+        <!-- Cream Muzzle -->
+        <ellipse cx="80" cy="94" rx="16" ry="12" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+        <polygon points="76,89 84,89 80,94" fill="#78350f"/>
+        
+        <path d="M68 72 Q74 66 80 72" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 72 Q88 66 94 72" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M74 80 Q80 85 86 80" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <rect x="54" y="96" width="52" height="15" rx="5" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+        <text x="80" y="107" font-family="sans-serif" font-weight="900" font-size="9" fill="#a16207" text-anchor="middle">GOOD! 👌</text>
+      
+      </g>
+    
+</svg>

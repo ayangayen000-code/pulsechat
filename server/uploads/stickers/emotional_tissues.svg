@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <rect x="42" y="70" width="76" height="52" rx="10" fill="#60a5fa" stroke="#1d4ed8" stroke-width="3"/>
+        <ellipse cx="80" cy="70" rx="26" ry="8" fill="#3b82f6"/>
+        <!-- Tissue sticking out -->
+        <path d="M68 70 Q75 42 85 46 Q92 52 88 70 Z" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+        <!-- Face on box -->
+        <circle cx="66" cy="92" r="3" fill="#ffffff"/>
+        <circle cx="94" cy="92" r="3" fill="#ffffff"/>
+        <path d="M76 102 Q80 98 84 102" stroke="#ffffff" stroke-width="2" fill="none"/>
+        <!-- Big tear rolling down -->
+        <path d="M64 96 C62 104 66 112 64 115" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </g>
+    
+</svg>

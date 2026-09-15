@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <linearGradient id="m_hype" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <circle cx="80" cy="80" r="46" fill="url(#m_hype)" stroke="#b45309" stroke-width="3"/>
+        <circle cx="62" cy="68" r="10" fill="#ffffff" stroke="#78350f" stroke-width="2"/>
+        <circle cx="62" cy="68" r="4" fill="#78350f"/>
+        <circle cx="98" cy="68" r="10" fill="#ffffff" stroke="#78350f" stroke-width="2"/>
+        <circle cx="98" cy="68" r="4" fill="#78350f"/>
+        <ellipse cx="80" cy="96" rx="16" ry="18" fill="#451a03"/>
+        <ellipse cx="80" cy="106" rx="10" ry="6" fill="#f87171"/>
+        <text x="26" y="148" font-family="sans-serif" font-weight="900" font-size="13" fill="#b45309">LET'S GOOOO! 🤩</text>
+      </g>
+    
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Hood -->
+        <circle cx="80" cy="80" r="46" fill="#18181b" stroke="#09090b" stroke-width="3"/>
+        <rect x="36" y="52" width="88" height="14" fill="#dc2626"/>
+        <rect x="46" y="68" width="68" height="24" rx="6" fill="#fed7aa"/>
+        <!-- Winking Eyes -->
+        <path d="M56 80 Q62 74 68 80" stroke="#09090b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="94" cy="80" r="3.5" fill="#09090b"/>
+        <!-- Hand Peace Sign -->
+        <circle cx="118" cy="115" r="14" fill="#fed7aa" stroke="#09090b" stroke-width="2.5"/>
+        <rect x="108" y="92" width="8" height="22" rx="4" fill="#fed7aa" stroke="#09090b" stroke-width="2"/>
+        <rect x="120" y="92" width="8" height="22" rx="4" fill="#fed7aa" stroke="#09090b" stroke-width="2"/>
+      </g>
+    
+</svg>

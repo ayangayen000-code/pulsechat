@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <polygon points="40,64 34,20 64,48" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+        <polygon points="120,64 126,20 96,48" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+        <ellipse cx="80" cy="88" rx="46" ry="40" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+        <polygon points="62,72 65,77 71,78 66,82 68,88 62,85 56,88 58,82 53,78 59,77" fill="#facc15"/>
+        <polygon points="98,72 101,77 107,78 102,82 104,88 98,85 92,88 94,82 89,78 95,77" fill="#facc15"/>
+        <path d="M68 94 Q80 108 92 94 Z" fill="#ef4444" stroke="#7c2d12" stroke-width="2"/>
+        <text x="56" y="32" font-family="sans-serif" font-weight="900" font-size="14" fill="#ea580c">POUNCE! ✨</text>
+      </g>
+    
+</svg>

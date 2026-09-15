@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="puppyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fbbf24"/>
+        <stop offset="100%" stop-color="#f59e0b"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <ellipse cx="36" cy="76" rx="14" ry="32" fill="#b45309" stroke="#78350f" stroke-width="2.5"/>
+        <ellipse cx="124" cy="76" rx="14" ry="32" fill="#b45309" stroke="#78350f" stroke-width="2.5"/>
+        <circle cx="80" cy="85" r="44" fill="url(#puppyGrad)" stroke="#d97706" stroke-width="3"/>
+        <ellipse cx="80" cy="94" rx="18" ry="14" fill="#fef3c7"/>
+        <ellipse cx="80" cy="88" rx="5" ry="3.5" fill="#1e293b"/>
+        
+        <path d="M66 70 Q72 64 78 70" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 70 Q88 64 94 70" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M74 80 Q80 85 86 80" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <rect x="54" y="96" width="52" height="15" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+        <text x="80" y="107" font-family="sans-serif" font-weight="900" font-size="9" fill="#b45309" text-anchor="middle">THANKS! 🙏</text>
+      
+      </g>
+    
+</svg>

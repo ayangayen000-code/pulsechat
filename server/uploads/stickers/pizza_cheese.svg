@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <polygon points="80,126 36,44 124,44" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+        <path d="M34 44 Q80 34 126 44" stroke="#92400e" stroke-width="12" stroke-linecap="round" fill="none"/>
+        <!-- Stretchy melting cheese string hanging from bottom -->
+        <path d="M80 126 Q75 145 80 155 Q85 145 80 126" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+        <circle cx="60" cy="70" r="3.5" fill="#713f12"/>
+        <circle cx="100" cy="70" r="3.5" fill="#713f12"/>
+        <path d="M72 82 Q80 94 88 82" stroke="#713f12" stroke-width="2.5" fill="#dc2626"/>
+      </g>
+    
+</svg>

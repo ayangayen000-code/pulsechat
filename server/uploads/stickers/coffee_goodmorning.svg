@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="morningCupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fed7aa"/>
+        <stop offset="100%" stop-color="#f97316"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Rising Sun Behind -->
+        <circle cx="76" cy="30" r="22" fill="#facc15" stroke="#f59e0b" stroke-width="2"/>
+        <line x1="76" y1="4" x2="76" y2="0" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+        <line x1="50" y1="14" x2="46" y2="10" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+        <line x1="102" y1="14" x2="106" y2="10" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+        <!-- Handle -->
+        <path d="M105 55 C128 55 128 95 105 95" fill="none" stroke="#c2410c" stroke-width="9" stroke-linecap="round"/>
+        <!-- Mug Body -->
+        <rect x="42" y="38" width="68" height="74" rx="14" fill="url(#morningCupGrad)" stroke="#c2410c" stroke-width="3"/>
+        <ellipse cx="76" cy="40" rx="34" ry="10" fill="#78350f" stroke="#c2410c" stroke-width="2"/>
+        <!-- Winking Eye (Left Wink, Right Open Sparkle) -->
+        <path d="M54 74 Q62 68 70 74" stroke="#431407" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <circle cx="90" cy="72" r="4" fill="#431407"/>
+        <!-- Cheerful Smile -->
+        <path d="M68 84 Q76 94 84 84" stroke="#431407" stroke-width="3" stroke-linecap="round" fill="#ef4444"/>
+        <!-- Rosy Cheeks -->
+        <circle cx="54" cy="82" r="5" fill="#f43f5e" opacity="0.5"/>
+        <circle cx="98" cy="82" r="5" fill="#f43f5e" opacity="0.5"/>
+        <!-- "AM" or sunshine badge -->
+        <rect x="62" y="98" width="28" height="12" rx="4" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
+        <text x="65" y="107" font-family="sans-serif" font-weight="900" font-size="9" fill="#713f12">AM ☀️</text>
+      </g>
+    
+</svg>

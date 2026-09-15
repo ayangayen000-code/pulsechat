@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Bunny Ears -->
+        <ellipse cx="64" cy="36" rx="8" ry="24" fill="#fde68a" stroke="#d97706" stroke-width="2.5" transform="rotate(-12 64 36)"/>
+        <ellipse cx="64" cy="36" rx="4" ry="16" fill="#f472b6" transform="rotate(-12 64 36)"/>
+        <ellipse cx="96" cy="36" rx="8" ry="24" fill="#fde68a" stroke="#d97706" stroke-width="2.5" transform="rotate(12 96 36)"/>
+        <ellipse cx="96" cy="36" rx="4" ry="16" fill="#f472b6" transform="rotate(12 96 36)"/>
+        <!-- Teacup -->
+        <rect x="44" y="56" width="72" height="60" rx="16" fill="#f59e0b" stroke="#b45309" stroke-width="3"/>
+        <ellipse cx="80" cy="56" rx="36" ry="10" fill="#92400e"/>
+        <!-- Face -->
+        <circle cx="66" cy="82" r="3.5" fill="#451a03"/>
+        <circle cx="94" cy="82" r="3.5" fill="#451a03"/>
+        <circle cx="80" cy="88" r="3" fill="#f43f5e"/>
+        <path d="M76 92 Q80 96 84 92" stroke="#451a03" stroke-width="2" fill="none"/>
+        <circle cx="58" cy="88" r="4" fill="#f472b6" opacity="0.6"/>
+        <circle cx="102" cy="88" r="4" fill="#f472b6" opacity="0.6"/>
+        <!-- Cinnamon stick -->
+        <rect x="100" y="40" width="8" height="32" rx="3" fill="#78350f" transform="rotate(25 100 40)"/>
+      </g>
+    
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Candle -->
+        <rect x="78" y="38" width="4" height="18" fill="#38bdf8"/>
+        <ellipse cx="80" cy="34" rx="3" ry="5" fill="#facc15"/>
+        <!-- Cake Slice -->
+        <polygon points="45,95 115,65 125,75 55,115" fill="#f472b6" stroke="#db2777" stroke-width="2.5"/>
+        <polygon points="45,95 55,115 55,130 45,115" fill="#ec4899"/>
+        <polygon points="55,115 125,75 125,90 55,130" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
+        <circle cx="85" cy="98" r="3" fill="#831843"/>
+        <circle cx="102" cy="90" r="3" fill="#831843"/>
+        <path d="M90 102 Q94 106 98 102" stroke="#831843" stroke-width="2" fill="none"/>
+      </g>
+    
+</svg>

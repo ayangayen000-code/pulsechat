@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Cardboard Box -->
+        <polygon points="35,80 125,80 115,130 45,130" fill="#b45309" stroke="#78350f" stroke-width="3"/>
+        <!-- Flaps open -->
+        <polygon points="35,80 20,65 45,65 50,80" fill="#d97706" stroke="#78350f" stroke-width="2"/>
+        <polygon points="125,80 140,65 115,65 110,80" fill="#d97706" stroke="#78350f" stroke-width="2"/>
+        <!-- Cat Inside Peeking Out -->
+        <ellipse cx="80" cy="72" rx="32" ry="24" fill="#18181b"/>
+        <polygon points="56,60 52,38 70,52" fill="#18181b"/>
+        <polygon points="104,60 108,38 90,52" fill="#18181b"/>
+        <!-- Yellow cat eyes -->
+        <ellipse cx="70" cy="70" rx="5" ry="6" fill="#facc15"/>
+        <ellipse cx="70" cy="70" rx="2" ry="5" fill="#000000"/>
+        <ellipse cx="90" cy="70" rx="5" ry="6" fill="#facc15"/>
+        <ellipse cx="90" cy="70" rx="2" ry="5" fill="#000000"/>
+        <!-- Front paws gripping box edge -->
+        <ellipse cx="64" cy="82" rx="6" ry="5" fill="#ffffff"/>
+        <ellipse cx="96" cy="82" rx="6" ry="5" fill="#ffffff"/>
+        <text x="60" y="112" font-family="sans-serif" font-weight="bold" font-size="11" fill="#fef3c7">IF IT FITS</text>
+      </g>
+    
+</svg>

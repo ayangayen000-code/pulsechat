@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="pinkCup" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ec4899"/>
+        <stop offset="100%" stop-color="#be185d"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <path d="M105 58 C126 58 126 92 105 92" fill="none" stroke="#9d174d" stroke-width="8" stroke-linecap="round"/>
+        <rect x="42" y="42" width="68" height="72" rx="14" fill="url(#pinkCup)" stroke="#9d174d" stroke-width="3"/>
+        <ellipse cx="76" cy="44" rx="34" ry="10" fill="#78350f"/>
+        <ellipse cx="76" cy="44" rx="28" ry="6" fill="#fff1f2"/>
+        <!-- Latte Art Heart -->
+        <path d="M76 47 C76 47 70 41 68 43 C66 45 68 48 76 52 C84 48 86 45 84 43 C82 41 76 47 76 47 Z" fill="#be185d"/>
+        <!-- Face -->
+        <circle cx="58" cy="80" r="5" fill="#fbcfe8"/>
+        <circle cx="94" cy="80" r="5" fill="#fbcfe8"/>
+        <circle cx="62" cy="72" r="3.5" fill="#fff"/>
+        <circle cx="90" cy="72" r="3.5" fill="#fff"/>
+        <path d="M71 81 Q76 87 81 81" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- Flying hearts -->
+        <path d="M80 18 C70 5 95 5 80 25 C65 5 90 5 80 18 Z" fill="#f43f5e" transform="translate(10, -5) scale(0.6)"/>
+        <path d="M80 18 C70 5 95 5 80 25 C65 5 90 5 80 18 Z" fill="#ec4899" transform="translate(-30, 0) scale(0.45)"/>
+      </g>
+    
+</svg>

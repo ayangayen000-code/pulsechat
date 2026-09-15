@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <rect x="36" y="44" width="88" height="60" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+        <rect x="124" y="64" width="8" height="20" rx="2" fill="#0f172a"/>
+        <rect x="44" y="52" width="16" height="44" fill="#ef4444"/>
+        <text x="42" y="132" font-family="monospace" font-weight="900" font-size="11" fill="#ef4444">LOW BATTERY</text>
+        <text x="48" y="148" font-family="monospace" font-weight="900" font-size="12" fill="#64748b">SLEEP MODE 😴</text>
+      </g>
+    
+</svg>

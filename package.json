@@ -1,0 +1,11 @@
+{
+  "name": "pulsechat",
+  "version": "1.0.0",
+  "description": "Production-ready personal messaging application for friends",
+  "scripts": {
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "test": "cd server && node test-e2e.js"
+  }
+}

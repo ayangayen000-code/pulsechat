@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="partyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f472b6"/>
+        <stop offset="100%" stop-color="#ec4899"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Party Popper Cone / Mascot Body -->
+        <circle cx="80" cy="82" r="44" fill="url(#partyGrad)" stroke="#be185d" stroke-width="3"/>
+        <!-- Confetti Burst around -->
+        <polygon points="76,32 80,18 84,32" fill="#facc15"/>
+        <circle cx="34" cy="48" r="4" fill="#38bdf8"/>
+        <circle cx="126" cy="48" r="4" fill="#4ade80"/>
+        <rect x="36" y="112" width="8" height="8" fill="#facc15" transform="rotate(25 40 116)"/>
+        <rect x="116" y="112" width="8" height="8" fill="#a855f7" transform="rotate(-25 120 116)"/>
+        
+        <polygon points="72,54 80,34 88,54" fill="#ec4899" stroke="#be185d" stroke-width="1.5"/>
+        <circle cx="80" cy="34" r="3" fill="#facc15"/>
+        <path d="M66 76 Q72 70 78 76" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 76 Q88 70 94 76" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <ellipse cx="80" cy="86" rx="8" ry="5" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>
+        <circle cx="56" cy="52" r="2.5" fill="#facc15"/>
+        <circle cx="104" cy="52" r="2.5" fill="#38bdf8"/>
+        <circle cx="52" cy="72" r="2" fill="#ec4899"/>
+        <circle cx="108" cy="72" r="2" fill="#22c55e"/>
+      
+      </g>
+    
+</svg>

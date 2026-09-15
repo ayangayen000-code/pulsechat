@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Plate -->
+        <ellipse cx="80" cy="120" rx="58" ry="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+        <!-- Pancake 3 (bottom) -->
+        <ellipse cx="80" cy="106" rx="46" ry="14" fill="#d97706" stroke="#78350f" stroke-width="2"/>
+        <!-- Pancake 2 (mid) -->
+        <ellipse cx="80" cy="92" rx="44" ry="13" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+        <!-- Pancake 1 (top) -->
+        <ellipse cx="80" cy="78" rx="42" ry="13" fill="#fbbf24" stroke="#78350f" stroke-width="2"/>
+        <!-- Syrup drip -->
+        <path d="M70 78 C70 90 74 95 76 95 C78 95 80 88 85 92 C90 96 92 84 92 78 Z" fill="#b45309"/>
+        <!-- Butter Cube -->
+        <polygon points="74,58 86,58 92,66 80,66" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+        <polygon points="74,58 80,66 80,74 74,66" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+        <polygon points="80,66 92,66 92,74 80,74" fill="#eab308" stroke="#ca8a04" stroke-width="1.5"/>
+        <!-- Face on top pancake -->
+        <circle cx="68" cy="80" r="2.5" fill="#451a03"/>
+        <circle cx="92" cy="80" r="2.5" fill="#451a03"/>
+        <path d="M77 84 Q80 88 83 84" stroke="#451a03" stroke-width="1.5" fill="none"/>
+      </g>
+    
+</svg>

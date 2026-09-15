@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="cheeseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fef08a"/>
+        <stop offset="100%" stop-color="#eab308"/>
+      </linearGradient>
+      <linearGradient id="crustGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#d97706"/>
+        <stop offset="100%" stop-color="#92400e"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Pizza Slice -->
+        <path d="M32 45 Q80 32 128 45 L80 135 Z" fill="url(#cheeseGrad)" stroke="#ca8a04" stroke-width="3"/>
+        <!-- Crust top -->
+        <path d="M30 46 Q80 30 130 46 Q80 20 30 46 Z" fill="url(#crustGrad)" stroke="#78350f" stroke-width="2"/>
+        <!-- Pepperonis -->
+        <circle cx="58" cy="62" r="8" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+        <circle cx="102" cy="62" r="8" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+        <circle cx="80" cy="112" r="7" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+        
+        <polygon points="72,70 74,76 80,77 75,80 73,86 70,81 65,82 69,77 67,72 72,75" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <polygon points="88,70 90,76 96,77 91,80 89,86 86,81 81,82 85,77 83,72 88,75" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <ellipse cx="80" cy="91" rx="8" ry="6" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>
+        <circle cx="62" cy="84" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="98" cy="84" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="104" cy="62" r="3" fill="#f59e0b"/>
+        <circle cx="56" cy="62" r="2" fill="#3b82f6"/>
+      
+      </g>
+    
+</svg>

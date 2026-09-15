@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Helmet Head -->
+        <circle cx="70" cy="80" r="40" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+        <rect x="42" y="70" width="56" height="18" rx="4" fill="#1e293b"/>
+        <circle cx="56" cy="79" r="3" fill="#facc15"/>
+        <circle cx="84" cy="79" r="3" fill="#facc15"/>
+        <!-- Plume -->
+        <path d="M70 40 Q65 15 80 18 Q75 35 70 40" fill="#ef4444"/>
+        <!-- Sword poking forward -->
+        <polygon points="90,92 148,82 148,88 90,98" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+        <rect x="86" y="86" width="6" height="18" rx="2" fill="#d97706"/>
+        <!-- Poke sparkle -->
+        <polygon points="148,85 152,80 157,85 152,90" fill="#facc15"/>
+      </g>
+    
+</svg>

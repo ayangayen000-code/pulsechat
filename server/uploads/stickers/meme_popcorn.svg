@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Red and White Striped Popcorn Bucket -->
+        <polygon points="45,65 115,65 105,130 55,130" fill="#ffffff" stroke="#b91c1c" stroke-width="3"/>
+        <polygon points="59,65 73,65 71,130 57,130" fill="#ef4444"/>
+        <polygon points="87,65 101,65 99,130 85,130" fill="#ef4444"/>
+        <!-- Popcorn Overflowing Kernels on top -->
+        <circle cx="55" cy="58" r="10" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+        <circle cx="75" cy="52" r="12" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+        <circle cx="95" cy="55" r="11" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+        <circle cx="80" cy="40" r="10" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+        <circle cx="65" cy="45" r="8" fill="#fde047"/>
+        <text x="48" y="105" font-family="sans-serif" font-weight="900" font-size="14" fill="#b91c1c">DRAMA</text>
+      </g>
+    
+</svg>

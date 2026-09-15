@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="calicoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fffbeb"/>
+        <stop offset="100%" stop-color="#fef3c7"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <polygon points="40,36 62,68 34,68" fill="#f97316" stroke="#c2410c" stroke-width="2.5"/>
+        <polygon points="120,36 98,68 126,68" fill="#475569" stroke="#1e293b" stroke-width="2.5"/>
+        <circle cx="80" cy="85" r="45" fill="url(#calicoGrad)" stroke="#d97706" stroke-width="3"/>
+        <path d="M35 78 C35 60 55 58 55 75 Z" fill="#f97316" opacity="0.6"/>
+        <line x1="32" y1="84" x2="18" y2="80" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+        <line x1="32" y1="90" x2="16" y2="92" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+        <line x1="128" y1="84" x2="142" y2="80" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+        <line x1="128" y1="90" x2="144" y2="92" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+        
+        <circle cx="64" cy="82" r="3.5" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="96" cy="82" r="3.5" fill="#f43f5e" opacity="0.6"/>
+        <path d="M66 74 Q72 68 78 74" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M82 74 Q88 68 94 74" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M71 82 Q80 92 89 82" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="#f43f5e"/>
+        <polygon points="104,58 106,64 112,66 106,68 104,74 102,68 96,66 102,64" fill="#facc15"/>
+      
+      </g>
+    
+</svg>

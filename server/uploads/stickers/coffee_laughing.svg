@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="laughCupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fde047"/>
+        <stop offset="100%" stop-color="#eab308"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Steam -->
+        <path d="M74 30 Q70 18 78 12" stroke="#eab308" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M86 28 Q90 16 84 10" stroke="#eab308" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Handle -->
+        <path d="M105 55 C128 55 128 95 105 95" fill="none" stroke="#a16207" stroke-width="9" stroke-linecap="round"/>
+        <!-- Mug Body -->
+        <rect x="42" y="38" width="68" height="74" rx="14" fill="url(#laughCupGrad)" stroke="#a16207" stroke-width="3"/>
+        <ellipse cx="76" cy="40" rx="34" ry="10" fill="#78350f" stroke="#a16207" stroke-width="2"/>
+        <!-- Squeezed Laughing Eyes > < -->
+        <path d="M54 68 L64 74 L54 80" stroke="#713f12" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M98 68 L88 74 L98 80" stroke="#713f12" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Tears of laughter shooting out -->
+        <path d="M46 72 Q36 70 38 64 Q44 66 46 72 Z" fill="#38bdf8"/>
+        <path d="M106 72 Q116 70 114 64 Q108 66 106 72 Z" fill="#38bdf8"/>
+        <!-- Wide Open Guffaw Mouth -->
+        <path d="M64 84 Q76 104 88 84 Z" fill="#881337" stroke="#713f12" stroke-width="2.5"/>
+        <ellipse cx="76" cy="96" rx="6" ry="3" fill="#f43f5e"/>
+      </g>
+    
+</svg>

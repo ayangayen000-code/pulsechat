@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Trophy -->
+        <path d="M56 46 L104 46 L98 84 Q80 100 62 84 Z" fill="#facc15" stroke="#ca8a04" stroke-width="3"/>
+        <path d="M56 52 C42 52 42 70 58 74" fill="none" stroke="#ca8a04" stroke-width="3.5"/>
+        <path d="M104 52 C118 52 118 70 102 74" fill="none" stroke="#ca8a04" stroke-width="3.5"/>
+        <rect x="74" y="94" width="12" height="16" fill="#ca8a04"/>
+        <rect x="62" y="110" width="36" height="12" rx="2" fill="#78350f"/>
+        <text x="36" y="144" font-family="monospace" font-weight="900" font-size="13" fill="#ca8a04">VICTORY! 🏆</text>
+      </g>
+    
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="frogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#4ade80"/>
+        <stop offset="100%" stop-color="#16a34a"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Frog Body & Big Eyes Top -->
+        <circle cx="56" cy="52" r="16" fill="url(#frogGrad)" stroke="#15803d" stroke-width="3"/>
+        <circle cx="104" cy="52" r="16" fill="url(#frogGrad)" stroke="#15803d" stroke-width="3"/>
+        <ellipse cx="80" cy="85" rx="54" ry="42" fill="url(#frogGrad)" stroke="#15803d" stroke-width="3.5"/>
+        <ellipse cx="80" cy="98" rx="34" ry="24" fill="#bbf7d0" opacity="0.8"/>
+        
+        <polygon points="72,64 74,70 80,71 75,74 73,80 70,75 65,76 69,71 67,66 72,69" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <polygon points="88,64 90,70 96,71 91,74 89,80 86,75 81,76 85,71 83,66 88,69" fill="#facc15" stroke="#ca8a04" stroke-width="1"/>
+        <ellipse cx="80" cy="85" rx="8" ry="6" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>
+        <circle cx="62" cy="78" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="98" cy="78" r="4" fill="#f43f5e" opacity="0.6"/>
+        <circle cx="104" cy="56" r="3" fill="#f59e0b"/>
+        <circle cx="56" cy="56" r="2" fill="#3b82f6"/>
+      
+      </g>
+    
+</svg>

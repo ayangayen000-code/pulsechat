@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+      <linearGradient id="pumpkinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fb923c"/>
+        <stop offset="100%" stop-color="#ea580c"/>
+      </linearGradient>
+    
+  </defs>
+  
+      <g filter="url(#shadow)">
+        <!-- Stem -->
+        <rect x="74" y="28" width="12" height="20" rx="4" fill="#15803d" stroke="#14532d" stroke-width="2" transform="rotate(-6 80 38)"/>
+        <!-- Pumpkin Ribs & Body -->
+        <ellipse cx="50" cy="86" rx="28" ry="38" fill="url(#pumpkinGrad)" stroke="#c2410c" stroke-width="2.5"/>
+        <ellipse cx="110" cy="86" rx="28" ry="38" fill="url(#pumpkinGrad)" stroke="#c2410c" stroke-width="2.5"/>
+        <ellipse cx="80" cy="88" rx="34" ry="42" fill="url(#pumpkinGrad)" stroke="#c2410c" stroke-width="3"/>
+        
+        <line x1="66" y1="72" x2="78" y2="78" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="94" y1="72" x2="82" y2="78" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="72" cy="82" r="3" fill="#1e293b"/>
+        <circle cx="88" cy="82" r="3" fill="#1e293b"/>
+        <path d="M72 91 L76 89 L80 91 L84 89 L88 91" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M100 62 L108 62 M104 58 L104 66 M101 59 L107 65" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+      
+      </g>
+    
+</svg>
