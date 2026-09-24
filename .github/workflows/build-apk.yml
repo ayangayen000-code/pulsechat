@@ -40,9 +40,14 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
+      - name: Accept Android SDK Licenses
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
       - name: Build Android APK with Gradle
         run: |
           cd client/android
+          sed -i 's/\r$//' gradlew
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon --stacktrace
 
