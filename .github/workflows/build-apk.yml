@@ -40,8 +40,9 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
-      - name: Accept Android SDK Licenses
+      - name: Set up Android SDK
         run: |
+          echo y | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "platforms;android-35" "build-tools;35.0.0" || true
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
       - name: Build Android APK with Gradle
@@ -49,18 +50,11 @@ jobs:
           cd client/android
           sed -i 's/\r$//' gradlew
           chmod +x gradlew
-          if ! ./gradlew assembleDebug --no-daemon --stacktrace > build.log 2>&1; then
-            echo "### Gradle Build Failed" >> $GITHUB_STEP_SUMMARY
-            echo '```text' >> $GITHUB_STEP_SUMMARY
-            tail -n 80 build.log >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            cat build.log
-            exit 1
-          fi
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: PulseChat-Android-APK
+          name: PulseChat-v1.0-APK
           path: client/android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
