@@ -4,11 +4,10 @@ services:
     runtime: node
     plan: free
     region: oregon
-    buildCommand: npm --prefix server install && npm --prefix client install && npm --prefix client run build
-    startCommand: node server/src/index.js
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000

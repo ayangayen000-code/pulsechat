@@ -92,7 +92,16 @@ app.get('*', (req, res, next) => {
     return next();
   }
   const indexPath = path.join(CLIENT_DIST, 'index.html');
-  res.sendFile(indexPath);
+  if (fs.existsSync(indexPath)) {
+    return res.sendFile(indexPath);
+  }
+  res.json({
+    status: 'ok',
+    app: 'PulseChat Backend Server',
+    message: 'PulseChat server is live and running! Connect using your PulseChat mobile app.',
+    healthCheck: '/api/health',
+    time: new Date().toISOString()
+  });
 });
 
 // Global error handler
