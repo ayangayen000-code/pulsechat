@@ -1,18 +1,21 @@
 import { io } from 'socket.io-client';
-import { getToken } from './api';
+import { getToken, getServerUrl } from './api';
 
 let socket = null;
 
 export function getSocket() {
   if (!socket) {
     const token = getToken();
-    const socketOrigin = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/$/, '') : '/';
+    const serverUrl = getServerUrl();
+    const socketOrigin = serverUrl || (typeof window !== 'undefined' ? window.location.origin : '/');
+
     socket = io(socketOrigin, {
       auth: { token },
       autoConnect: false,
       reconnection: true,
-      reconnectionAttempts: 10,
-      reconnectionDelay: 1000
+      reconnectionAttempts: 15,
+      reconnectionDelay: 1000,
+      transports: ['websocket', 'polling']
     });
   }
   return socket;
@@ -35,4 +38,14 @@ export function disconnectSocket() {
     socket.disconnect();
     socket = null;
   }
+}
+
+// Automatically reconnect socket if server URL is changed
+if (typeof window !== 'undefined') {
+  window.addEventListener('server-url:changed', () => {
+    disconnectSocket();
+    if (getToken()) {
+      connectSocket();
+    }
+  });
 }

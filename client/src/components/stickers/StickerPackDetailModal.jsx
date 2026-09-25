@@ -12,7 +12,7 @@ import {
   Loader2,
   Maximize2
 } from 'lucide-react';
-import { api } from '../../services/api';
+import { api, resolveMediaUrl } from '../../services/api';
 
 export default function StickerPackDetailModal({
   packId,
@@ -117,7 +117,7 @@ export default function StickerPackDetailModal({
               {/* Cover Icon */}
               <div className="relative w-24 h-24 rounded-2xl bg-zinc-800/60 p-2 flex items-center justify-center flex-shrink-0 border border-zinc-700/60 shadow-lg">
                 <img
-                  src={pack.icon_url || pack.cover_image}
+                  src={resolveMediaUrl(pack.icon_url || pack.cover_image)}
                   alt={pack.name}
                   className="max-w-full max-h-full object-contain filter drop-shadow-md"
                 />
@@ -200,7 +200,7 @@ export default function StickerPackDetailModal({
                     className="group relative aspect-square rounded-2xl bg-zinc-900/70 hover:bg-zinc-800/90 border border-zinc-800/80 hover:border-zinc-700/80 p-3 flex flex-col items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95 shadow-subtle"
                   >
                     <img
-                      src={stk.image_url}
+                      src={resolveMediaUrl(stk.image_url)}
                       alt={stk.name}
                       className="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform"
                     />
@@ -240,7 +240,7 @@ export default function StickerPackDetailModal({
 
               <div className="w-40 h-40 my-2 flex items-center justify-center">
                 <img
-                  src={zoomedSticker.image_url}
+                  src={resolveMediaUrl(zoomedSticker.image_url)}
                   alt={zoomedSticker.name}
                   className="max-w-full max-h-full object-contain filter drop-shadow-2xl animate-bounce-subtle"
                 />

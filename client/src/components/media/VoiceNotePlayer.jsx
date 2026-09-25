@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause } from 'lucide-react';
+import { resolveMediaUrl } from '../../services/api';
 
 export default function VoiceNotePlayer({ src, waveforms = [], duration = 0, isOutgoing = false }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -17,7 +18,7 @@ export default function VoiceNotePlayer({ src, waveforms = [], duration = 0, isO
 
   const togglePlay = () => {
     if (!audioRef.current && src) {
-      const audio = new Audio(src);
+      const audio = new Audio(resolveMediaUrl(src));
       audio.playbackRate = speed;
       audio.onended = () => {
         setIsPlaying(false);

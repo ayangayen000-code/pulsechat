@@ -14,11 +14,16 @@ import {
   Loader2,
   Trash2,
   Eye,
-  EyeOff
+  EyeOff,
+  Server,
+  Wifi,
+  Globe,
+  RefreshCw,
+  CheckCircle2
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
-import { api } from '../../services/api';
+import { api, getServerUrl, setServerUrl, checkServerHealth } from '../../services/api';
 import { useToast } from '../layout/Toast';
 
 const ACCENT_COLORS = [
@@ -56,6 +61,25 @@ export default function SettingsPage() {
   // Danger zone delete modal
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteConfirmText, setDeleteConfirmText] = useState('');
+
+  // Server & Connection states
+  const [serverUrl, setServerUrlState] = useState(getServerUrl());
+  const [serverTesting, setServerTesting] = useState(false);
+  const [serverTestResult, setServerTestResult] = useState(null);
+
+  const handleTestServer = async (testUrl) => {
+    setServerTesting(true);
+    setServerTestResult(null);
+    const res = await checkServerHealth(testUrl !== undefined ? testUrl : serverUrl);
+    setServerTestResult(res);
+    setServerTesting(false);
+  };
+
+  const handleSaveServer = () => {
+    setServerUrl(serverUrl.trim());
+    showToast('Server URL saved! Socket reconnecting...');
+    handleTestServer(serverUrl.trim());
+  };
 
   const loadStorage = async () => {
     try {
@@ -147,6 +171,7 @@ export default function SettingsPage() {
     { id: 'privacy', label: 'Privacy & Security', icon: Shield },
     { id: 'storage', label: 'Data & Storage', icon: HardDrive },
     { id: 'account', label: 'Account & Security', icon: User },
+    { id: 'server', label: 'Server & Network', icon: Server },
     { id: 'about', label: 'About PulseChat', icon: Info },
   ];
 
@@ -385,6 +410,101 @@ export default function SettingsPage() {
                 <Trash2 className="w-3.5 h-3.5" />
                 <span>Delete Account</span>
               </button>
+            </div>
+          </div>
+        )}
+
+        {/* Server & Network Section */}
+        {activeSection === 'server' && (
+          <div className="space-y-6 animate-fade-in">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-1">Server & Network Connection</h3>
+              <p className="text-xs text-zinc-400">Configure where PulseChat connects to sync your messages, calls, and files.</p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-semibold text-zinc-300">Connection Health</span>
+                {serverTesting ? (
+                  <span className="inline-flex items-center gap-1.5 text-xs text-amber-400 font-medium">
+                    <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                    Pinging server...
+                  </span>
+                ) : serverTestResult?.ok ? (
+                  <span className="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
+                    Online ({serverTestResult.latency}ms)
+                  </span>
+                ) : (
+                  <button
+                    onClick={() => handleTestServer()}
+                    className="text-xs text-brand hover:underline font-semibold"
+                  >
+                    Check Status
+                  </button>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-zinc-400 mb-1.5">Server URL</label>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={serverUrl}
+                    onChange={(e) => setServerUrlState(e.target.value)}
+                    placeholder="e.g. http://192.168.1.3:5000 or https://your-server.onrender.com"
+                    className="flex-1 px-4 py-2.5 rounded-xl bg-zinc-950 border border-zinc-800 text-xs text-white font-mono outline-none focus:border-brand"
+                  />
+                  <button
+                    onClick={() => handleTestServer(serverUrl)}
+                    disabled={serverTesting}
+                    className="px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-zinc-200 transition-colors"
+                  >
+                    Test
+                  </button>
+                  <button
+                    onClick={handleSaveServer}
+                    className="px-4 py-2 rounded-xl bg-brand hover:bg-brand-hover text-white text-xs font-semibold shadow-glow shadow-brand/20 transition-colors"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <span className="text-xs font-semibold text-zinc-400 block mb-2">Quick Presets:</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setServerUrlState('http://192.168.1.3:5000');
+                      handleTestServer('http://192.168.1.3:5000');
+                    }}
+                    className="p-3 rounded-xl bg-zinc-950/60 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs"
+                  >
+                    <div className="flex items-center gap-2 font-medium text-white">
+                      <Wifi className="w-3.5 h-3.5 text-brand" />
+                      <span>Home Wi-Fi (PC)</span>
+                    </div>
+                    <p className="text-[11px] text-zinc-500 font-mono mt-1">http://192.168.1.3:5000</p>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setServerUrlState('');
+                      handleTestServer('');
+                    }}
+                    className="p-3 rounded-xl bg-zinc-950/60 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs"
+                  >
+                    <div className="flex items-center gap-2 font-medium text-white">
+                      <Globe className="w-3.5 h-3.5 text-indigo-400" />
+                      <span>Default / Localhost</span>
+                    </div>
+                    <p className="text-[11px] text-zinc-500 font-mono mt-1">/api (Browser relative)</p>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         )}

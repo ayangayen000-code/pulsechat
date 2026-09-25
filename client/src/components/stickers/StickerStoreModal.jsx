@@ -15,7 +15,7 @@ import {
   ArrowLeft,
   Grid
 } from 'lucide-react';
-import { api } from '../../services/api';
+import { api, resolveMediaUrl } from '../../services/api';
 import StickerPackDetailModal from './StickerPackDetailModal';
 import CreateStickerPackModal from './CreateStickerPackModal';
 import MyStickersManagerModal from './MyStickersManagerModal';
@@ -282,7 +282,7 @@ function PackCard({ pack, onSelect, onToggleAdd, actionLoading, categoryTheme })
         <div className="flex items-center gap-3 min-w-0">
           <div className="w-12 h-12 rounded-2xl bg-zinc-800/90 p-2 border border-zinc-700/60 flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform shadow-sm">
             <img
-              src={pack.icon_url || pack.cover_image}
+              src={resolveMediaUrl(pack.icon_url || pack.cover_image)}
               alt={pack.name}
               className="max-w-full max-h-full object-contain filter drop-shadow-sm"
             />
@@ -344,7 +344,7 @@ function PackCard({ pack, onSelect, onToggleAdd, actionLoading, categoryTheme })
                 className="w-11 h-11 rounded-xl bg-zinc-950/70 p-1 flex items-center justify-center hover:bg-zinc-800 transition-colors border border-zinc-800/40"
               >
                 <img
-                  src={stk.image_url}
+                  src={resolveMediaUrl(stk.image_url)}
                   alt={stk.name}
                   className="max-w-full max-h-full object-contain filter drop-shadow-sm group-hover:scale-110 transition-transform"
                 />
@@ -729,7 +729,7 @@ export default function StickerStoreModal({ isOpen, onClose }) {
                     >
                       <div className="w-full flex-1 flex items-center justify-center p-1">
                         <img
-                          src={stk.image_url}
+                          src={resolveMediaUrl(stk.image_url)}
                           alt={stk.name}
                           className="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform"
                         />
@@ -975,7 +975,7 @@ export default function StickerStoreModal({ isOpen, onClose }) {
                             }`}
                           >
                             <img
-                              src={stk.image_url}
+                              src={resolveMediaUrl(stk.image_url)}
                               alt={stk.name}
                               className="max-w-full max-h-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform"
                             />

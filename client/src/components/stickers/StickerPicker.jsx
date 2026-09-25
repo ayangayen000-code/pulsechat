@@ -11,7 +11,7 @@ import {
   X,
   Plus
 } from 'lucide-react';
-import { api } from '../../services/api';
+import { api, resolveMediaUrl } from '../../services/api';
 import StickerStoreModal from './StickerStoreModal';
 import MyStickersManagerModal from './MyStickersManagerModal';
 import CreateStickerPackModal from './CreateStickerPackModal';
@@ -267,7 +267,7 @@ export default function StickerPicker({ onSelectSticker, onClose }) {
                     className="group relative aspect-square rounded-2xl hover:bg-zinc-900 p-2 flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95"
                   >
                     <img
-                      src={stk.image_url}
+                      src={resolveMediaUrl(stk.image_url)}
                       alt={stk.name}
                       className="max-w-full max-h-full object-contain filter drop-shadow-md"
                     />
@@ -308,7 +308,7 @@ export default function StickerPicker({ onSelectSticker, onClose }) {
                       className="group relative aspect-square rounded-2xl hover:bg-zinc-900 p-2 flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95"
                     >
                       <img
-                        src={stk.image_url}
+                        src={resolveMediaUrl(stk.image_url)}
                         alt={stk.name}
                         className="max-w-full max-h-full object-contain filter drop-shadow-md"
                       />
@@ -347,7 +347,7 @@ export default function StickerPicker({ onSelectSticker, onClose }) {
                     className="group relative aspect-square rounded-2xl hover:bg-zinc-900 p-2 flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95"
                   >
                     <img
-                      src={stk.image_url}
+                      src={resolveMediaUrl(stk.image_url)}
                       alt={stk.name}
                       className="max-w-full max-h-full object-contain filter drop-shadow-md"
                     />
@@ -389,7 +389,7 @@ export default function StickerPicker({ onSelectSticker, onClose }) {
                     className="group relative aspect-square rounded-2xl hover:bg-zinc-900 p-2 flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95"
                   >
                     <img
-                      src={stk.image_url}
+                      src={resolveMediaUrl(stk.image_url)}
                       alt={stk.name}
                       className="max-w-full max-h-full object-contain filter drop-shadow-md"
                     />
@@ -473,7 +473,7 @@ export default function StickerPicker({ onSelectSticker, onClose }) {
                 }`}
               >
                 <img
-                  src={pack.icon_url || pack.cover_image}
+                  src={resolveMediaUrl(pack.icon_url || pack.cover_image)}
                   alt={pack.name}
                   className="max-w-full max-h-full object-contain filter drop-shadow-sm"
                 />

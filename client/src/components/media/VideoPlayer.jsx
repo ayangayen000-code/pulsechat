@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import { Play, Pause, Volume2, VolumeX, Maximize, Download } from 'lucide-react';
+import { resolveMediaUrl } from '../../services/api';
 
 export default function VideoPlayer({ src, filename }) {
   const videoRef = useRef(null);
+  const resolvedSrc = resolveMediaUrl(src);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -40,7 +42,7 @@ export default function VideoPlayer({ src, filename }) {
     <div className="relative rounded-2xl overflow-hidden bg-black max-w-sm sm:max-w-md group shadow-md select-none">
       <video
         ref={videoRef}
-        src={src}
+        src={resolvedSrc}
         muted={isMuted}
         onTimeUpdate={handleTimeUpdate}
         onEnded={() => setIsPlaying(false)}

@@ -1,5 +1,9 @@
 {
   "appId": "com.pulsechat.app",
   "appName": "PulseChat",
-  "webDir": "dist"
+  "webDir": "dist",
+  "server": {
+    "cleartext": true,
+    "androidScheme": "https"
+  }
 }

@@ -19,6 +19,7 @@ import {
 import { useAuth } from '../../context/AuthContext';
 import { useChat } from '../../context/ChatContext';
 import { useToast } from '../layout/Toast';
+import { resolveMediaUrl } from '../../services/api';
 import ImageGrid from '../media/ImageGrid';
 import VideoPlayer from '../media/VideoPlayer';
 import VoiceNotePlayer from '../media/VoiceNotePlayer';
@@ -492,7 +493,7 @@ export default function MessageBubble({
               {message.type === 'sticker' && (
                 <div className="p-1 group/stk relative">
                   <img
-                    src={message.metadata?.sticker_url || message.content}
+                    src={resolveMediaUrl(message.metadata?.sticker_url || message.content)}
                     alt={message.metadata?.name || 'Sticker'}
                     className="w-36 h-36 object-contain filter drop-shadow-lg select-none hover:scale-105 transition-transform cursor-pointer"
                     onClick={() => {
