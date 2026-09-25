@@ -477,31 +477,31 @@ export default function SettingsPage() {
                   <button
                     type="button"
                     onClick={() => {
+                      setServerUrlState('https://pulsechat-server-2z5x.onrender.com');
+                      handleTestServer('https://pulsechat-server-2z5x.onrender.com');
+                    }}
+                    className="p-3 rounded-xl bg-zinc-950/60 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs"
+                  >
+                    <div className="flex items-center gap-2 font-medium text-white">
+                      <Globe className="w-3.5 h-3.5 text-brand" />
+                      <span>24/7 Cloud Server (Render)</span>
+                    </div>
+                    <p className="text-[11px] text-zinc-500 font-mono mt-1">https://pulsechat-server-2z5x.onrender.com</p>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
                       setServerUrlState('http://192.168.1.3:5000');
                       handleTestServer('http://192.168.1.3:5000');
                     }}
                     className="p-3 rounded-xl bg-zinc-950/60 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs"
                   >
                     <div className="flex items-center gap-2 font-medium text-white">
-                      <Wifi className="w-3.5 h-3.5 text-brand" />
+                      <Wifi className="w-3.5 h-3.5 text-indigo-400" />
                       <span>Home Wi-Fi (PC)</span>
                     </div>
                     <p className="text-[11px] text-zinc-500 font-mono mt-1">http://192.168.1.3:5000</p>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setServerUrlState('');
-                      handleTestServer('');
-                    }}
-                    className="p-3 rounded-xl bg-zinc-950/60 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs"
-                  >
-                    <div className="flex items-center gap-2 font-medium text-white">
-                      <Globe className="w-3.5 h-3.5 text-indigo-400" />
-                      <span>Default / Localhost</span>
-                    </div>
-                    <p className="text-[11px] text-zinc-500 font-mono mt-1">/api (Browser relative)</p>
                   </button>
                 </div>
               </div>

@@ -117,25 +117,25 @@ export default function ServerSettingsModal({ onClose, onSaved }) {
           <span className="text-xs font-semibold text-zinc-400">Quick Presets:</span>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <button
+              onClick={() => applyPreset('https://pulsechat-server-2z5x.onrender.com')}
+              className="p-3 rounded-xl bg-zinc-950/50 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs group"
+            >
+              <div className="flex items-center gap-2 font-medium text-white group-hover:text-brand">
+                <Globe className="w-3.5 h-3.5 text-brand" />
+                <span>24/7 Cloud Server (Render)</span>
+              </div>
+              <p className="text-[11px] text-zinc-500 mt-1 font-mono truncate">https://pulsechat-server-2z5x.onrender.com</p>
+            </button>
+
+            <button
               onClick={() => applyPreset('http://192.168.1.3:5000')}
               className="p-3 rounded-xl bg-zinc-950/50 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs group"
             >
               <div className="flex items-center gap-2 font-medium text-white group-hover:text-brand">
-                <Wifi className="w-3.5 h-3.5 text-brand" />
+                <Wifi className="w-3.5 h-3.5 text-indigo-400" />
                 <span>Home Wi-Fi (PC)</span>
               </div>
               <p className="text-[11px] text-zinc-500 mt-1 font-mono truncate">http://192.168.1.3:5000</p>
-            </button>
-
-            <button
-              onClick={() => applyPreset('')}
-              className="p-3 rounded-xl bg-zinc-950/50 hover:bg-zinc-800/80 border border-zinc-800 text-left transition-all text-xs group"
-            >
-              <div className="flex items-center gap-2 font-medium text-white group-hover:text-brand">
-                <Globe className="w-3.5 h-3.5 text-indigo-400" />
-                <span>Browser Default (Relative)</span>
-              </div>
-              <p className="text-[11px] text-zinc-500 mt-1 font-mono truncate">/api (Uses browser domain)</p>
             </button>
           </div>
         </div>

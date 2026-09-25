@@ -1,3 +1,5 @@
+export const DEFAULT_PRODUCTION_SERVER = 'https://pulsechat-server-2z5x.onrender.com';
+
 export function getServerUrl() {
   const custom = typeof localStorage !== 'undefined' ? localStorage.getItem('pulsechat_server_url') : null;
   if (custom && custom.trim()) {
@@ -13,10 +15,9 @@ export function getServerUrl() {
     (window.location.hostname === 'localhost' && (!window.location.port || window.location.port === '80'))
   );
   if (isNative) {
-    // Default to the computer's local Wi-Fi IP so the user can test at home immediately
-    return 'http://192.168.1.3:5000';
+    return DEFAULT_PRODUCTION_SERVER;
   }
-  return '';
+  return DEFAULT_PRODUCTION_SERVER;
 }
 
 export function setServerUrl(url) {
