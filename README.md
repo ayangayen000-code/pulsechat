@@ -2,6 +2,8 @@
 
 > Private, high-fidelity personal messaging designed specifically for you and your inner circle. **Zero phone numbers required.**
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ayangayen000-code/pulsechat)
+
 PulseChat operates on **Unique User IDs** (e.g., `@ayan_4821`), eliminating the need for SMS verification or phone number disclosure. It runs seamlessly across mobile phones, tablets, and desktop computers with a responsive PWA architecture.
 
 ---
