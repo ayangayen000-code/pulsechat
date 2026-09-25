@@ -1,21 +1,21 @@
 export const DEFAULT_PRODUCTION_SERVER = 'https://pulsechat-server-2z5x.onrender.com';
 
 export function getServerUrl() {
-  const custom = typeof localStorage !== 'undefined' ? localStorage.getItem('pulsechat_server_url') : null;
+  if (typeof localStorage === 'undefined') return DEFAULT_PRODUCTION_SERVER;
+  const custom = localStorage.getItem('pulsechat_server_url');
   if (custom && custom.trim()) {
-    return custom.trim().replace(/\/$/, '');
-  }
-  if (import.meta.env.VITE_API_URL) {
-    return import.meta.env.VITE_API_URL.replace(/\/$/, '');
-  }
-  // If running inside Capacitor Android/iOS WebView where hostname is localhost without dev port
-  const isNative = typeof window !== 'undefined' && (
-    Boolean(window.Capacitor?.isNativePlatform?.()) ||
-    window.location.protocol === 'capacitor:' ||
-    (window.location.hostname === 'localhost' && (!window.location.port || window.location.port === '80'))
-  );
-  if (isNative) {
-    return DEFAULT_PRODUCTION_SERVER;
+    const clean = custom.trim().replace(/\/$/, '');
+    // If it was an old local IP from earlier testing, automatically purge it
+    if (
+      clean.includes('192.168.') ||
+      clean.includes('localhost') ||
+      clean.includes('127.0.0.1') ||
+      clean.startsWith('http://10.')
+    ) {
+      localStorage.removeItem('pulsechat_server_url');
+      return DEFAULT_PRODUCTION_SERVER;
+    }
+    return clean;
   }
   return DEFAULT_PRODUCTION_SERVER;
 }
@@ -50,7 +50,8 @@ export async function checkServerHealth(customUrl) {
   const base = (customUrl !== undefined ? customUrl : getServerUrl()).replace(/\/$/, '');
   const target = `${base}/api/health`;
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 4000);
+  // 45-second timeout to accommodate Render free tier cold-start spin-up
+  const timer = setTimeout(() => controller.abort(), 45000);
   const startTime = performance.now();
   try {
     const res = await fetch(target, { signal: controller.signal });
@@ -65,7 +66,7 @@ export async function checkServerHealth(customUrl) {
     clearTimeout(timer);
     return {
       ok: false,
-      error: err.name === 'AbortError' ? 'Connection timed out (4s)' : (err.message || 'Cannot reach server'),
+      error: err.name === 'AbortError' ? 'Cloud server waking up (~30s). Please hold on...' : (err.message || 'Cannot reach server'),
       url: base
     };
   }
@@ -102,15 +103,26 @@ async function request(endpoint, options = {}) {
   const base = getServerUrl();
   const fullUrl = `${base}/api${endpoint.startsWith('/') ? '' : '/'}${endpoint}`;
 
+  // Add a 45s timeout for Render free-tier cold starts
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 45000);
+
   let response;
   try {
     response = await fetch(fullUrl, {
       ...options,
+      signal: options.signal || controller.signal,
       headers,
     });
   } catch (fetchErr) {
+    clearTimeout(timeoutId);
     const displayHost = base || window.location.origin || 'current server';
-    throw new Error(`Cannot reach server at "${displayHost}". Check your Wi-Fi or tap Server Settings to configure.`);
+    if (fetchErr.name === 'AbortError') {
+      throw new Error(`Cloud server is taking a moment to wake up (Render cold start). Please try again in 15 seconds!`);
+    }
+    throw new Error(`Cannot reach cloud server at "${displayHost}". If opening the app after inactivity, the free cloud server takes ~30s to wake up. Please tap retry in a moment!`);
+  } finally {
+    clearTimeout(timeoutId);
   }
 
   const data = await response.json().catch(() => ({}));

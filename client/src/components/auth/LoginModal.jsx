@@ -159,8 +159,18 @@ export default function LoginModal({ onClose, onSwitchToRegister }) {
               disabled={loading}
               className="w-full mt-2 h-12 rounded-xl bg-brand hover:bg-brand-hover text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-glow shadow-brand/20 disabled:opacity-50"
             >
-              {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Sign In'}
+              {loading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <span>Signing In...</span>
+                </>
+              ) : 'Sign In'}
             </button>
+            {loading && (
+              <p className="text-[11px] text-center text-zinc-400 animate-pulse mt-1">
+                Connecting to cloud server (waking up if inactive)...
+              </p>
+            )}
           </form>
 
           {/* Server Connection Bar */}

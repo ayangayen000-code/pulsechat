@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageSquare, Shield, Users, Sparkles, ArrowRight, UserCheck, Server, AlertCircle } from 'lucide-react';
+import { MessageSquare, Shield, Users, Sparkles, ArrowRight, UserCheck, Server, AlertCircle, RefreshCw } from 'lucide-react';
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
 import ServerSettingsModal from '../common/ServerSettingsModal';
@@ -18,6 +18,13 @@ export default function WelcomeScreen() {
   const checkStatus = async () => {
     const res = await checkServerHealth();
     setServerStatus(res);
+    // If it was waking up, retry once after 10s to see if it came online
+    if (!res.ok && res.error?.includes('waking up')) {
+      setTimeout(async () => {
+        const retryRes = await checkServerHealth();
+        setServerStatus(retryRes);
+      }, 10000);
+    }
   };
 
   useEffect(() => {
@@ -67,7 +74,7 @@ export default function WelcomeScreen() {
             <span className="hidden sm:inline">Server</span>
             <span
               className={`w-2 h-2 rounded-full ${
-                serverStatus === null
+                serverStatus === null || (!serverStatus?.ok && serverStatus?.error?.includes('waking up'))
                   ? 'bg-amber-400 animate-pulse'
                   : serverStatus?.ok
                   ? 'bg-emerald-400'
@@ -93,15 +100,22 @@ export default function WelcomeScreen() {
 
       {/* Hero Section */}
       <main className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 max-w-4xl mx-auto z-10 py-8 sm:py-12">
-        {/* Offline Warning Banner */}
+        {/* Offline / Waking Up Banner */}
         {serverStatus && !serverStatus.ok && (
           <div
             onClick={() => setShowServerSettings(true)}
-            className="cursor-pointer mb-6 inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium hover:bg-amber-500/20 transition-all max-w-md text-left"
+            className="cursor-pointer mb-6 inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-medium hover:bg-amber-500/20 transition-all max-w-md text-left"
           >
-            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
+            {serverStatus.error?.includes('waking up') ? (
+              <RefreshCw className="w-4 h-4 text-amber-400 shrink-0 animate-spin" />
+            ) : (
+              <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
+            )}
             <div className="flex-1">
-              <span className="font-semibold">Server unreachable.</span> Tap here to set your server URL (<span className="font-mono text-white">{getServerUrl() || 'default'}</span>).
+              <span className="font-semibold">
+                {serverStatus.error?.includes('waking up') ? 'Cloud Server Waking Up:' : 'Server Offline:'}
+              </span>{' '}
+              {serverStatus.error} Tap to configure.
             </div>
           </div>
         )}
@@ -154,6 +168,12 @@ export default function WelcomeScreen() {
 
         {/* Quick Demo Accounts Switcher */}
         <div className="w-full max-w-lg p-5 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
+          {quickLoginLoading && (
+            <div className="mb-3 p-2 rounded-xl bg-brand/10 border border-brand/20 text-xs text-brand font-medium flex items-center justify-center gap-2 animate-pulse">
+              <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+              <span>Signing into cloud server (waking up if sleeping)...</span>
+            </div>
+          )}
           <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">
             <UserCheck className="w-3.5 h-3.5 text-brand" />
             <span>Instant Demo Accounts (One-Click Sign In)</span>

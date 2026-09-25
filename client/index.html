@@ -21,9 +21,28 @@
     <script type="module" src="/src/main.jsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch((err) => console.log('SW register failed:', err));
-        });
+        const isNative = Boolean(
+          window.Capacitor?.isNativePlatform?.() ||
+          window.location.protocol === 'capacitor:' ||
+          (window.location.hostname === 'localhost' && (!window.location.port || window.location.port === '80'))
+        );
+        if (isNative) {
+          // In native Android WebView, unregister service workers so fresh APK bundles load cleanly
+          navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for (const registration of registrations) {
+              registration.unregister();
+            }
+          });
+          if ('caches' in window) {
+            caches.keys().then((keys) => {
+              for (const key of keys) caches.delete(key);
+            });
+          }
+        } else {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch((err) => console.log('SW register failed:', err));
+          });
+        }
       }
     </script>
   </body>
