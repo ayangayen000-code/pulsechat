@@ -74,8 +74,10 @@ app.use('/api/notifications', notificationsRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/themes', themesRoutes);
 
-// Serve client build if dist exists
-const CLIENT_DIST = path.resolve(__dirname, '../../client/dist');
+// Serve client web application if public or dist exists
+const CLIENT_DIST = fs.existsSync(path.resolve(__dirname, '../public/index.html'))
+  ? path.resolve(__dirname, '../public')
+  : path.resolve(__dirname, '../../client/dist');
 app.use(express.static(CLIENT_DIST));
 
 // Global health check
